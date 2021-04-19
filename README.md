@@ -23,6 +23,8 @@ Then you can add the package to your composer dependencies
 composer require schn/laravel-nsw-components
 ```
 
+You should also install the [NSW Design System](https://github.com/digitalnsw/nsw-design-system) and inlcude the necessary CSS and Javascript into your template. **This package does not include any CSS or Javascript.**
+
 ## Available Components
 
 | Component                                   | Description                                                                                                                    |
@@ -51,6 +53,12 @@ composer require schn/laravel-nsw-components
 
 ### `x-nsw-grid`
 
+12 column grid with multiple breakpoints.
+
+https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/digital-styles/layout
+
+**size:** `(xs|sm|md|lg|xl)-{width}`
+
 ```html
 <x-nsw-grid>
   <x-nsw-col size="md-6">
@@ -65,6 +73,10 @@ composer require schn/laravel-nsw-components
 ---
 
 ### `x-nsw-accordion`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/accordion
+
+**title:** The title of an accordion panel
 
 ```html
 <x-nsw-accordion>
@@ -81,6 +93,13 @@ composer require schn/laravel-nsw-components
 
 ### `x-nsw-callout`
 
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout
+
+**title:** The callout title  
+**icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)  
+**url:** (optional)  
+**linkText:** (optional)
+
 ```html
 <x-nsw-callout title="Callout title" icon="info" url="https://website.com">
   <p>Callout content</p>
@@ -92,6 +111,16 @@ composer require schn/laravel-nsw-components
 
 ### `x-nsw-card`
 
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/cards
+
+**title:** The card title  
+**icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)  
+**url:** (optional)  
+**date:** A [Carbon](https://carbon.nesbot.com/) date object (optional)
+
+> Note: unlike other components, you should not wrap your content in paragraph tags.  
+> A styled paragraph container is provided by the component.
+
 ```html
 <x-nsw-card
   title="Card title"
@@ -99,13 +128,19 @@ composer require schn/laravel-nsw-components
   url="https://website.com"
   :date="$carbon_date"
 >
-  <p>Card content</p>
+  Card content
 </x-nsw-card>
 ```
 
 ---
 
 ### `x-nsw-global-alert`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/global-alerts
+
+**title:** The alert title  
+**type:** `(info|critial|light)`  
+**url:** Link for the "More Information" button (optional)
 
 ```html
 <x-nsw-global-alert
@@ -121,6 +156,12 @@ composer require schn/laravel-nsw-components
 
 ### `x-nsw-notification`
 
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/page-notifications
+
+**title:** The notification title  
+**type:** `(info|success|warning|error)`  
+**icon:** Name of a [Material Icon](https://fonts.google.com/icons)
+
 ```html
 <x-nsw-notification
   title="Notification title"
@@ -134,6 +175,10 @@ composer require schn/laravel-nsw-components
 ---
 
 ### `x-nsw-tabs`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/tabs
+
+**title:** The title of each tab
 
 ```html
 <x-nsw-tabs>
@@ -151,6 +196,8 @@ composer require schn/laravel-nsw-components
 ### `pagination`
 
 Paginators are available for both [Laravel](https://laravel.com/docs/8.x/pagination) and [Livewire](https://laravel-livewire.com/docs/2.x/pagination)
+
+https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/pagination
 
 ```php
 // Default pagination
