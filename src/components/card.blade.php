@@ -1,7 +1,7 @@
 @props([
     'icon' => null,
     'image' => null,
-    'link' => null,
+    'url' => null,
     'title' => null,
     'date' => null,
     'highlight' => false
@@ -16,8 +16,8 @@
         @endif
         @if ($title)
             <h2 class="nsw-card__title">
-                @if ($link)
-                    <a href="{{ $link }}" class="nsw-card__link">{{ $title }}</a>
+                @if ($url)
+                    <a href="{{ $url }}" class="nsw-card__link">{{ $title }}</a>
                 @else
                     {{ $title }}
                 @endif

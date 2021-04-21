@@ -35,6 +35,8 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | [`x-nsw-callout`](#x-nsw-callout)           | [Callout](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout)                          |
 | [`x-nsw-card`](#x-nsw-card)                 | [Cards](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/cards)                              |
 | [`x-nsw-global-alert`](#x-nsw-global-alert) | [Global alerts](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/global-alerts)              |
+| [`x-nsw-input`](#x-nsw-input)               | [Input field](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms)              |
+| [`x-nsw-hero-classic`](#x-nsw-hero-classic)   | Hero Classic                                                                                                                    |
 | [`x-nsw-notification`](#x-nsw-notification) | [In-page notifications](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/page-notifications) |
 | [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/tabs)                     |
 | [`pagination`](#pagination)                 | [Pagination](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/pagination)     |
@@ -151,6 +153,49 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
   <p>Global alret message</p>
 </x-nsw-global-alert>
 ```
+---
+
+### `x-nsw-input`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms
+
+**id:** The alert title  
+**type:** `(text|email|password)` default is 'text' (optional)  
+**name:** Name of the field  
+**label:** Label text  
+**wire:model:** If using livewire, you may use the wire:model attribute on the component (optional)
+
+```html
+ <x-nsw-input 
+  id="first_name"
+  name="first_name"
+  label="Enter your first name"
+/>    
+```
+---
+
+### `x-nsw-hero-classic`
+
+Deprecated version of the Hero Banner component in the NSW Design System
+
+**title:** The hero title  
+**image:** Link to background image url 
+**url:** (optional)  
+**icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)  
+**dark:** Use this flag to use a dark background (optional)
+
+```html
+<x-nsw-hero-classic
+    title="Hero title text"
+    image="https://some-image.url"
+    url="https://website.com"
+    icon="check"
+    dark 
+    >
+     <p>Hero content</p>
+ </x-nsw-hero-classic>
+```
+
 
 ---
 
