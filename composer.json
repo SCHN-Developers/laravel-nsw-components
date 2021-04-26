@@ -9,13 +9,13 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "SCHN\\LaravelNSWComponents\\": "src"
+      "Schn\\LaravelNswComponents\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "SCHN\\LaravelNSWComponents\\LaravelNSWComponentsServiceProvider"
+        "Schn\\LaravelNswComponents\\LaravelNswComponentsServiceProvider"
       ]
     }
   }
