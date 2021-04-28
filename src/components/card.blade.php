@@ -24,7 +24,7 @@
             </h2>
         @endif
         @if ($slot->toHtml())
-            <p class="nsw-card__copy">{{ $slot }}</p>
+            <div class="nsw-card__copy">{{ $slot }}</div>
         @endif
         @if ($icon)
             <i class="material-icons nsw-material-icons nsw-card__icon" focusable="false" aria-hidden="true">{{ $icon }}</i>

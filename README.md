@@ -29,10 +29,10 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 
 ### Layout
 
-| Component                                   | Description                                                                                                                    |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| [`x-nsw-container`](#x-nsw-accordion)       | Container                                                                                                                      |
-| [`x-nsw-grid`](#x-nsw-accordion)            | [Grid](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/digital-styles/layout)                             |
+| Component                             | Description                                                                                        |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [`x-nsw-container`](#x-nsw-container) | Container                                                                                          |
+| [`x-nsw-grid`](#x-nsw-grid)           | [Grid](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/digital-styles/layout) |
 
 ### Components
 
@@ -43,7 +43,7 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | [`x-nsw-callout`](#x-nsw-callout)           | [Callout](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout)                          |
 | [`x-nsw-card`](#x-nsw-card)                 | [Cards](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/cards)                              |
 | [`x-nsw-global-alert`](#x-nsw-global-alert) | [Global alerts](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/global-alerts)              |
-| [`x-nsw-hero-classic`](#x-nsw-hero-classic)   | Hero Classic                                                                                                                    |
+| [`x-nsw-hero-classic`](#x-nsw-hero-classic) | Hero Classic                                                                                                                   |
 | [`x-nsw-notification`](#x-nsw-notification) | [In-page notifications](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/page-notifications) |
 | [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/tabs)                     |
 | [`pagination`](#pagination)                 | [Pagination](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/pagination)     |
@@ -159,9 +159,6 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 **date:** A [Carbon](https://carbon.nesbot.com/) date object (optional)  
 **highlight:** Use this flag to add a highlight (optional)
 
-> Note: unlike other components, you should not wrap your content in paragraph tags.  
-> A styled paragraph container is provided by the component.
-
 ```html
 <x-nsw-card
   title="Card title"
@@ -171,7 +168,7 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
   :date="$carbon_date"
   hightlight
 >
-  Card content
+  <p>Card content</p>
 </x-nsw-card>
 ```
 
@@ -292,6 +289,8 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 </x-nsw-form>
 ```
 
+---
+
 ### `x-nsw-input`
 
 https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms
@@ -302,7 +301,7 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 **helpText:** Help text for the field (optional)
 
 ```html
- <x-nsw-input
+<x-nsw-input
   type="text"
   name="first_name"
   label="Name"
@@ -327,7 +326,7 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
   name="color"
   label="Color"
   helpText="Choose a color"
-  :options=['r'=>'Red', 'b'=>'Blue', 'g'=>'Green']
+  :options="['r'=>'Red', 'b'=>'Blue', 'g'=>'Green']"
 />
 ```
 
