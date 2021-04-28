@@ -21,7 +21,7 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelnswcomponents::accordion-panel', 'nsw-panel');
 
         // Components
-        // Blade::component('laravelnswcomponents::button', 'nsw-button');
+        Blade::component('laravelnswcomponents::button', 'nsw-button');
         Blade::component('laravelnswcomponents::card', 'nsw-card');
         Blade::component('laravelnswcomponents::callout', 'nsw-callout');
         Blade::component('laravelnswcomponents::global-alert', 'nsw-global-alert');
