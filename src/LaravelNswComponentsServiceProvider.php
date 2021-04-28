@@ -31,6 +31,7 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelnswcomponents::hero-classic', 'nsw-hero-classic');
 
         // Forms
+        Blade::component('laravelnswcomponents::forms.container', 'nsw-form');
         Blade::component('laravelnswcomponents::forms.text-field', 'nsw-input');
         // Blade::component('laravelnswcomponents::input', 'nsw-input');
         // Blade::component('laravelnswcomponents::textarea', 'nsw-textarea');
