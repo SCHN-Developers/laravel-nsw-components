@@ -27,19 +27,34 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 
 ## Available Components
 
+### Layout
+
 | Component                                   | Description                                                                                                                    |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | [`x-nsw-container`](#x-nsw-accordion)       | Container                                                                                                                      |
 | [`x-nsw-grid`](#x-nsw-accordion)            | [Grid](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/digital-styles/layout)                             |
+
+### Components
+
+| Component                                   | Description                                                                                                                    |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | [`x-nsw-accordion`](#x-nsw-accordion)       | [Accordion](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/accordion)                      |
+| [`x-nsw-button`](#x-nsw-button)             | [Buttons](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/buttons)                      |
 | [`x-nsw-callout`](#x-nsw-callout)           | [Callout](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout)                          |
 | [`x-nsw-card`](#x-nsw-card)                 | [Cards](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/cards)                              |
 | [`x-nsw-global-alert`](#x-nsw-global-alert) | [Global alerts](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/global-alerts)              |
-| [`x-nsw-input`](#x-nsw-input)               | [Input field](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms)              |
 | [`x-nsw-hero-classic`](#x-nsw-hero-classic)   | Hero Classic                                                                                                                    |
 | [`x-nsw-notification`](#x-nsw-notification) | [In-page notifications](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/page-notifications) |
 | [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/tabs)                     |
 | [`pagination`](#pagination)                 | [Pagination](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/pagination)     |
+
+### Forms
+
+| Component                       | Description    |
+| ------------------------------- | -------------- |
+| [`x-nsw-form`](#x-nsw-form)     | Form container |
+| [`x-nsw-input`](#x-nsw-input)   | Text fields    |
+| [`x-nsw-select`](#x-nsw-select) | Select         |
 
 ---
 
@@ -93,6 +108,28 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 
 ---
 
+### `x-nsw-button`
+
+https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/buttons
+
+**text:** Text for the button  
+**tag:** `(button|input|a)` (optional)  
+**type:** `(button|submit|reset)` (optional)  
+**style:** `(primary|outline|highlight|white)` (optional)
+
+```html
+// Action button
+<x-nsw-button text="Button button" />
+
+// Input button
+<x-nsw-button tag="input" text="Input button" style="highlight" />
+
+// Link styled as button
+<x-nsw-button tag="a" href="#" text="Link button" style="outline" />
+```
+
+---
+
 ### `x-nsw-callout`
 
 https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout
@@ -117,8 +154,10 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 
 **title:** The card title  
 **icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)  
+**image:** Link to header image url (optional)  
 **url:** (optional)  
-**date:** A [Carbon](https://carbon.nesbot.com/) date object (optional)
+**date:** A [Carbon](https://carbon.nesbot.com/) date object (optional)  
+**highlight:** Use this flag to add a highlight (optional)
 
 > Note: unlike other components, you should not wrap your content in paragraph tags.  
 > A styled paragraph container is provided by the component.
@@ -127,8 +166,10 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 <x-nsw-card
   title="Card title"
   icon="info"
+  image="https://website.com/some/image.jpg"
   url="https://website.com"
   :date="$carbon_date"
+  hightlight
 >
   Card content
 </x-nsw-card>
@@ -153,25 +194,7 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
   <p>Global alret message</p>
 </x-nsw-global-alert>
 ```
----
 
-### `x-nsw-input`
-
-https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms
-
-**id:** The alert title  
-**type:** `(text|email|password)` default is 'text' (optional)  
-**name:** Name of the field  
-**label:** Label text  
-**wire:model:** If using livewire, you may use the wire:model attribute on the component (optional)
-
-```html
- <x-nsw-input 
-  id="first_name"
-  name="first_name"
-  label="Enter your first name"
-/>    
-```
 ---
 
 ### `x-nsw-hero-classic`
@@ -179,23 +202,22 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 Deprecated version of the Hero Banner component in the NSW Design System
 
 **title:** The hero title  
-**image:** Link to background image url 
+**image:** Link to background image url  
 **url:** (optional)  
 **icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)  
 **dark:** Use this flag to use a dark background (optional)
 
 ```html
 <x-nsw-hero-classic
-    title="Hero title text"
-    image="https://some-image.url"
-    url="https://website.com"
-    icon="check"
-    dark 
-    >
-     <p>Hero content</p>
- </x-nsw-hero-classic>
+  title="Hero title text"
+  image="https://some-image.url"
+  url="https://website.com"
+  icon="check"
+  dark
+>
+  <p>Hero content</p>
+</x-nsw-hero-classic>
 ```
-
 
 ---
 
@@ -258,9 +280,59 @@ $model->paginate(10)
 $model->links('laravelnswcomponents::pagination.livewire-default')
 ```
 
+---
+
+### `x-nsw-form`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms
+
+```html
+<x-nsw-form>
+  <!-- Form fields here -->
+</x-nsw-form>
+```
+
+### `x-nsw-input`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms
+
+**id:** id attribute, will be autogenerated if omitted (optional)  
+**name:** Name of the field  
+**label:** Label text  
+**helpText:** Help text for the field (optional)
+
+```html
+ <x-nsw-input
+  type="text"
+  name="first_name"
+  label="Name"
+  helpText="Enter your first name"
+/>
+```
+
+---
+
+### `x-nsw-select`
+
+https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/forms
+
+**id:** id attribute, will be autogenerated if omitted (optional)  
+**name:** Name of the field  
+**options:** key/value pair of select options  
+**label:** Label text  
+**helpText:** Help text for the field (optional)
+
+```html
+<x-nsw-select
+  name="color"
+  label="Color"
+  helpText="Choose a color"
+  :options=['r'=>'Red', 'b'=>'Blue', 'g'=>'Green']
+/>
+```
+
 ## Todo
 
-- [Buttons](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/buttons)
 - [Content Blocks](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/content-blocks)
 - [Hero banner](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/hero-banner)
 - [Hero search](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/navigating/hero-search)
