@@ -30,16 +30,16 @@
                     @if (is_array($element))
                         @foreach ($element as $page => $url)
                             @if ($page == $paginator->currentPage())
-                                <li class="nsw-pagination__item nsw-pagination__item--is-active" wire:key="paginator-page-{{ $page }}" aria-current="page">
-                                    <a id="paginator-current-page" class="nsw-pagination__link is-current">
+                                <li id="paginator-current-page" class="nsw-pagination__item nsw-pagination__item--is-active" wire:key="paginator-page-{{ $page }}" aria-current="page">
+                                    <a class="nsw-pagination__link is-current">
                                         <span class="nsw-pagination__text">
                                             <span class="sr-only">Page </span>{{ $page }}
                                         </span>
                                     </a>
                                 </li>
                             @else
-                                <li class="nsw-pagination__item" wire:key="paginator-page-{{ $page }}">
-                                    <a id="paginator-page-{{ $page }}" href="#" class="nsw-pagination__link" wire:click.prevent="gotoPage({{ $page }})">
+                                <li id="paginator-page-{{ $page }}" class="nsw-pagination__item" wire:key="paginator-page-{{ $page }}">
+                                    <a href="#" class="nsw-pagination__link" wire:click.prevent="gotoPage({{ $page }})">
                                         <span class="nsw-pagination__text">
                                             <span class="sr-only">Page </span>{{ $page }}
                                         </span>
