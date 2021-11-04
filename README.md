@@ -160,7 +160,6 @@ An accordion is a series of expandable vertical panels, designed to save space o
 https://digitalnsw.github.io/nsw-design-system/components/accordion/index.html
 
 **title:** The title of an accordion panel
-
 **expandToggle:** (`true|null`) Display 'Expand all / Collapse all' toggle at top of Accordion (optional)
 
 ```html
@@ -486,7 +485,7 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 
 https://nswdesignsystem.surge.sh/components/forms/index.html
 
-**name:** Name of the checkbox group (should be same as subsequent checkbox components for validation purposes)
+**name:** Name of the checkbox group (should be same as subsequent checkbox components for validation purposes
 **label:** Label text
 **helpText:** Help text for the group (optional)
 **required:** Show a red asterisk next the group label to indicate that it's required (optional)
