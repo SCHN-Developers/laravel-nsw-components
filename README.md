@@ -23,7 +23,7 @@ Then you can add the package to your composer dependencies
 composer require schn/laravel-nsw-components
 ```
 
-You should also install the [NSW Design System](https://github.com/digitalnsw/nsw-design-system) and inlcude the necessary CSS and Javascript into your template. **This package does not include any CSS or Javascript.**
+You should also install the [NSW Design System](https://github.com/digitalnsw/nsw-design-system) and inlcude the - necessary CSS and Javascript into your template. **This package does not include any CSS or Javascript.**
 
 ## Available Components
 
@@ -70,7 +70,7 @@ The Masthead displays across the top of all NSW Government sites and clearly ide
 
 https://digitalnsw.github.io/nsw-design-system/components/masthead/index.html
 
-**light:** Optional parameter to add for light variant
+- **light:** Optional parameter to add for light variant
 
 ```html
 <x-nsw-masthead light />
@@ -96,7 +96,7 @@ A nsw-container keeps a container width of 1200px and the nsw-page-layout acts a
 
 https://digitalnsw.github.io/nsw-design-system/core/layout/index.html
 
-**sidebar:** `(left|right)` (optional)
+- **sidebar:** `(left|right)` (optional)
 
 _left_ - Displays a left hand sidebar that is visible on 992px+ viewports, with a main content area that is always visible. (Recommended for side navigation)
 
@@ -119,7 +119,7 @@ _right_ - Displays a right hand sidebar that stacks on 0 - 991px viewports, with
 
 https://digitalnsw.github.io/nsw-design-system/core/grid/index.html
 
-**size:** `(xs|sm|md|lg|xl)-{width}`
+- **size:** `(xs|sm|md|lg|xl)-{width}`
 
 ```html
 <x-nsw-grid>
@@ -140,10 +140,10 @@ Flexible layout component that groups content and components together providing 
 
 https://digitalnsw.github.io/nsw-design-system/core/section/index.html
 
-**padding:** `(half|no)` (optional)
-**style:** `(color|image|box)` (optional)
-**color:** `(brand-dark|brand-light|brand-supplementary|black|white|grey-01|grey-02...)` (optional)
-**image:** `e.g. https://picsum.photos/id/199/2000/1250` (optional)
+- **padding:** `(half|no)` (optional)
+- **style:** `(color|image|box)` (optional)
+- **color:** `(brand-dark|brand-light|brand-supplementary|black|white|grey-01|grey-02...)` (optional)
+- **image:** `e.g. https://picsum.photos/id/199/2000/1250` (optional)
 
 ```html
 <x-nsw-section style="color" color="brand-dark" padding="half">
@@ -159,8 +159,8 @@ An accordion is a series of expandable vertical panels, designed to save space o
 
 https://digitalnsw.github.io/nsw-design-system/components/accordion/index.html
 
-**title:** The title of an accordion panel
-**expandToggle:** (`true|null`) Display 'Expand all / Collapse all' toggle at top of Accordion (optional)
+- **title:** The title of an accordion panel
+- **expandToggle:** (`true|null`) Display 'Expand all / Collapse all' toggle at top of Accordion (optional)
 
 ```html
 <x-nsw-accordion expandToggle="true">
@@ -177,11 +177,11 @@ Buttons provide users with the ability to submit an action. (v3.0)
 
 https://digitalnsw.github.io/nsw-design-system/components/button/index.html
 
-**text:** Text for the button
-**tag:** `(button|input|a)` (optional)
-**type:** `(button|submit|reset)` (optional)
-**style:** `(dark|dark-outline|dark-outline-solid|light|light-outline|white|danger)` (optional)
-**icon:** material icon name (optional)
+- **text:** Text for the button
+- **tag:** `(button|input|a)` (optional)
+- **type:** `(button|submit|reset)` (optional)
+- **style:** `(dark|dark-outline|dark-outline-solid|light|light-outline|white|danger)` (optional)
+- **icon:** material icon name (optional)
 
 ```html
 // Action button
@@ -205,10 +205,10 @@ Callouts are a snippet of information that draws attention to important content.
 
 https://digitalnsw.github.io/nsw-design-system/components/callout/index.html
 
-**title:** The callout title
-**icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)
-**url:** (optional)
-**linkText:** (optional)
+- **title:** The callout title
+- **icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)
+- **url:** (optional)
+- **linkText:** (optional)
 
 ```html
 <x-nsw-callout title="Callout title" icon="info" url="https://website.com">
@@ -225,14 +225,14 @@ Cards group related content or tasks to make it easier for users to scan, read, 
 
 https://digitalnsw.github.io/nsw-design-system/components/card/index.html
 
-**title:** The card title
-**icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)
-**image:** Link to header image url (optional)
-**url:** (optional)
-**date:** A [Carbon](https://carbon.nesbot.com/) date object (optional)
-**highlight:** Use this flag to add a highlight - not shown when 'style' is applied (optional)
-**tag:** Display a text tag at the top of the card content section to categorize the content (optional)
-**style:** (`dark|light|null`) background color brand dark or light - negates highlight (optional)
+- **title:** The card title
+- **icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)
+- **image:** Link to header image url (optional)
+- **url:** (optional)
+- **date:** A [Carbon](https://carbon.nesbot.com/) date object (optional)
+- **highlight:** Use this flag to add a highlight - not shown when 'style' is applied (optional)
+- **tag:** Display a text tag at the top of the card content section to categorize the content (optional)
+- **style:** (`dark|light|null`) background color brand dark or light - negates highlight (optional)
 
 ```html
 <x-nsw-card
@@ -255,10 +255,10 @@ Global alerts display across the top of an entire site to convey important infor
 
 https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/global-alerts
 
-**title:** The alert title
-**type:** `(null|critial|light)` (optional)
-**url:** Link for the "More Information" button (optional)
-**buttonText:** Button text for CTA in alert (optional)
+- **title:** The alert title
+- **type:** `(null|critial|light)` (optional)
+- **url:** Link for the "More Information" button (optional)
+- **buttonText:** Button text for CTA in alert (optional)
 
 ```html
 <x-nsw-global-alert
@@ -277,11 +277,11 @@ https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-libra
 
 Deprecated version of the Hero Banner component in the NSW Design System
 
-**title:** The hero title
-**image:** Link to background image url
-**url:** (optional)
-**icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)
-**dark:** Use this flag to use a dark background (optional)
+- **title:** The hero title
+- **image:** Link to background image url
+- **url:** (optional)
+- **icon:** Name of a [Material Icon](https://fonts.google.com/icons) (optional)
+- **dark:** Use this flag to use a dark background (optional)
 
 ```html
 <x-nsw-hero-classic
@@ -301,11 +301,11 @@ Deprecated version of the Hero Banner component in the NSW Design System
 
 The hero banner reflects the goals or purpose of the product or service. (v3.0)
 
-**style:** `(dark|light)` (optional)
-**title:** Main title text for banner
-**image:** Link to background image url on right hand side (optional)
-**text:** Slot for banner subtext (optional)
-**action:** Slot for call to action button (optional)
+- **style:** `(dark|light)` (optional)
+- **title:** Main title text for banner
+- **image:** Link to background image url on right hand side (optional)
+- **text:** Slot for banner subtext (optional)
+- **action:** Slot for call to action button (optional)
 
 ```html
 <x-nsw-hero-banner
@@ -332,9 +332,9 @@ In-page notifications are used to contextually inform users of important informa
 
 https://digitalnsw.github.io/nsw-design-system/components/in-page-note/index.html
 
-**title:** The notification title
-**type:** `(info|success|warning|error)`
-**icon:** Name of a [Material Icon](https://fonts.google.com/icons)
+- **title:** The notification title
+- **type:** `(info|success|warning|error)`
+- **icon:** Name of a [Material Icon](https://fonts.google.com/icons)
 
 ```html
 <x-nsw-notification
@@ -354,7 +354,7 @@ Tabs are a form of secondary in-page navigation, helping to group different type
 
 https://digitalnsw.github.io/nsw-design-system/components/tabs/index.html
 
-**title:** The title of each tab
+- **title:** The title of each tab
 
 ```html
 <x-nsw-tabs>
@@ -417,11 +417,11 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 
 https://nswdesignsystem.surge.sh/components/forms/index.html
 
-**id:** id attribute, will be autogenerated if omitted (optional)
-**name:** Name of the field
-**label:** Label text
-**helpText:** Help text for the field (optional)
-**required:** Show a red asterisk next the field label to indicate that it's required (optional)
+- **id:** id attribute, will be autogenerated if omitted (optional)
+- **name:** Name of the field
+- **label:** Label text
+- **helpText:** Help text for the field (optional)
+- **required:** Show a red asterisk next the field label to indicate that it's required (optional)
 
 ```html
 <x-nsw-input
@@ -441,12 +441,12 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 
 https://nswdesignsystem.surge.sh/components/forms/index.html
 
-**id:** id attribute, will be autogenerated if omitted (optional)
-**name:** Name of the field
-**options:** key/value pair of select options
-**label:** Label text
-**helpText:** Help text for the field (optional)
-**required:** Show a red asterisk next the field label to indicate that it's required (optional)
+- **id:** id attribute, will be autogenerated if omitted (optional)
+- **name:** Name of the field
+- **options:** key/value pair of select options
+- **label:** Label text
+- **helpText:** Help text for the field (optional)
+- **required:** Show a red asterisk next the field label to indicate that it's required (optional)
 
 ```html
 <x-nsw-select
@@ -465,11 +465,11 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 
 https://nswdesignsystem.surge.sh/components/forms/index.html
 
-**id:** id attribute, will be autogenerated if omitted (optional)
-**name:** Name of the field
-**value:** value of the selection (optional)
-**label:** Label text
-**required:** Show a red asterisk next the field label to indicate that it's required (optional)
+- **id:** id attribute, will be autogenerated if omitted (optional)
+- **name:** Name of the field
+- **value:** value of the selection (optional)
+- **label:** Label text
+- **required:** Show a red asterisk next the field label to indicate that it's required (optional)
 
 ```html
 <x-nsw-checkbox
@@ -485,10 +485,10 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 
 https://nswdesignsystem.surge.sh/components/forms/index.html
 
-**name:** Name of the checkbox group (should be same as subsequent checkbox components for validation purposes
-**label:** Label text
-**helpText:** Help text for the group (optional)
-**required:** Show a red asterisk next the group label to indicate that it's required (optional)
+- **name:** Name of the checkbox group (should be same as subsequent checkbox components for validation purposes
+- **label:** Label text
+- **helpText:** Help text for the group (optional)
+- **required:** Show a red asterisk next the group label to indicate that it's required (optional)
 
 ```html
 <x-nsw-checkbox-group
@@ -508,11 +508,11 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 
 https://nswdesignsystem.surge.sh/components/forms/index.html
 
-**name:** Name of the radio group
-**label:** Label text
-**helpText:** Help text for the group (optional)
-**options:** key/value pair of select options
-**required:** Show a red asterisk next the group label to indicate that it's required (optional)
+- **name:** Name of the radio group
+- **label:** Label text
+- **helpText:** Help text for the group (optional)
+- **options:** key/value pair of select options
+- **required:** Show a red asterisk next the group label to indicate that it's required (optional)
 
 ```html
 <x-nsw-radio-group
