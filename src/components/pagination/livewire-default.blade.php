@@ -1,76 +1,40 @@
-<div>
-    @if ($paginator->hasPages())
-        <nav aria-label="Pagination">
-            <ul class="nsw-pagination">
-                {{-- Previous Page Link --}}
-                @if ($paginator->onFirstPage())
-                    <li class="nsw-pagination__item nsw-pagination__item--prev-page">
-                        <a class="nsw-direction-link nsw-direction-link--icon-left" rel="prev">
-                            <i class="material-icons nsw-material-icons nsw-material-icons--rotate-180" focusable="false" aria-hidden="true">east</i>
-                            <span class="nsw-direction-link__text">Back <span class="sr-only">a page</span></span>
-                        </a>
-                    </li>
-                @else
-                    <li class="nsw-pagination__item nsw-pagination__item--prev-page">
-                        <a href="#" class="nsw-direction-link nsw-direction-link--icon-left" wire:click.prevent="previousPage" rel="prev">
-                            <i class="material-icons nsw-material-icons nsw-material-icons--rotate-180" focusable="false" aria-hidden="true">east</i>
-                            <span class="nsw-direction-link__text">Back <span class="sr-only">a page</span></span>
-                        </a>
-                    </li>
+@if($paginator->hasPages())
+    <nav class="nsw-pagination" aria-label="Pagination">
+    <ul>
+         {{-- Previous Page Link --}}
+        <li>
+            <a class="nsw-icon-button" @if(!$paginator->onFirstPage()) href="#" wire:click.prevent="previousPage" @endif>
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                <span class="sr-only">Back</span>
+            </a>
+        </li>
+
+        {{-- Pagination Elements --}}
+        @foreach ($elements as $element)
+            {{-- "Three Dots" Separator --}}
+            @if (is_string($element))
+                <li>
+                    <li class="nsw-pagination__item" aria-disabled="true"><span class="nsw-pagination__text">{{ $element }}</span></li>
+                </li>
                 @endif
 
-                {{-- Pagination Elements --}}
-                @foreach ($elements as $element)
-                    {{-- "Three Dots" Separator --}}
-                    @if (is_string($element))
-                        <li class="nsw-pagination__item" aria-disabled="true"><span class="nsw-pagination__text">{{ $element }}</span></li>
-                    @endif
-
-                    {{-- Array Of Links --}}
-                    @if (is_array($element))
-                        @foreach ($element as $page => $url)
-                            @if ($page == $paginator->currentPage())
-                                <li class="nsw-pagination__item nsw-pagination__item--is-active" wire:key="paginator-page-{{ $page }}" aria-current="page">
-                                    <a class="nsw-pagination__link is-current">
-                                        <span class="nsw-pagination__text">
-                                            <span class="sr-only">Page </span>{{ $page }}
-                                        </span>
-                                    </a>
-                                </li>
-                            @else
-                                <li class="nsw-pagination__item" wire:key="paginator-page-{{ $page }}">
-                                    <a href="#" class="nsw-pagination__link" wire:click.prevent="gotoPage({{ $page }})">
-                                        <span class="nsw-pagination__text">
-                                            <span class="sr-only">Page </span>{{ $page }}
-                                        </span>
-                                    </a>
-                                </li>
-                            @endif
-                        @endforeach
-                    @endif
-                @endforeach
-
-                {{-- Next Page Link --}}
-                @if ($paginator->hasMorePages())
-                    <li class="nsw-pagination__item nsw-pagination__item--next-page">
-                        <a href="#" class="nsw-direction-link" wire:click.prevent="nextPage" rel="next">
-                            <span class="nsw-direction-link__text">
-                                Next <span class="sr-only">page</span>
-                            </span>
-                            <i class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">east</i>
+                {{-- Array Of Links --}}
+                @if (is_array($element))
+                    @foreach ($element as $page => $url)
+                        <a @if($page == $paginator->currentPage()) class="active" wire:key="paginator-page-{{ $page }}" @else wire:click.prevent="gotoPage({{ $page }}" @endif href="{{ $url }}">
+                            <span class="sr-only">Page </span>{{ $page }}
                         </a>
-                    </li>
-                @else
-                    <li class="nsw-pagination__item nsw-pagination__item--next-page">
-                        <a class="nsw-direction-link" rel="next">
-                            <span class="nsw-direction-link__text">
-                                Next <span class="sr-only">page</span>
-                            </span>
-                            <i class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">east</i>
-                        </a>
-                    </li>
+                    @endforeach
                 @endif
-            </ul>
-        </nav>
-    @endif
-</div>
+
+        @endforeach
+        {{-- Next Page Link --}}
+        <li>
+            <a class="nsw-icon-button"  @if ($paginator->hasMorePages()) href="#" wire:click.prevent="nextPage" @endif>
+                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+    </nav>
+@endif
