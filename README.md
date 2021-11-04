@@ -25,6 +25,43 @@ composer require schn/laravel-nsw-components
 
 You should also install the [NSW Design System](https://github.com/digitalnsw/nsw-design-system) and inlcude the - necessary CSS and Javascript into your template. **This package does not include any CSS or Javascript.**
 
+## HTML Starter Template
+
+```
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sydney Children's Hospital Network</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+  <link rel="icon" href=".../../favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+
+<body>
+  <x-nsw-masthead light />
+  <x-nsw-header />
+
+  @yield('content')
+
+  <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        window.NSW.initSite()
+    </script>
+</body>
+</html>
+
+```
+
+
 ## Available Components
 
 ### Layout
@@ -241,7 +278,7 @@ https://digitalnsw.github.io/nsw-design-system/components/card/index.html
   image="https://website.com/some/image.jpg"
   url="https://website.com"
   :date="$carbon_date"
-  hightlight
+  highlight
 >
   <p>Card content</p>
 </x-nsw-card>
