@@ -14,16 +14,14 @@
 <div class="nsw-tabs js-tabs is-ready">
     <ul class="nsw-tabs__list" role="tablist">
         @foreach ($tabs as $i => $tab)
-            <li class="nsw-tabs__list-item{{ $loop->first ? ' is-selected' : '' }}" role="presentation">
-                <a href="#{{ $tab['slug'] }}" class="nsw-tabs__link" role="tab" id="tab-{{ $tab['id'] }}" aria-selected="{{ $loop->first ? 'true' : 'false' }}"{!! $loop->first ? '' : ' tabindex="-1"' !!}>{{ $tab['title'] }}</a>
+            <li>
+                <a href="#{{ $tab['slug'] }}">{{ $tab['title'] }}</a>
             </li>
         @endforeach
     </ul>
     @foreach ($tabs as $tab)
-        <section id="{{ $tab['slug'] }}" class="nsw-tabs__content" role="tabpanel" aria-labelledby="tab-{{ $tab['id'] }}" tabindex="0"{!! $loop->first ? '' : ' hidden=""' !!}>
-            <div class="nsw-wysiwyg-content">
+        <section id="{{ $tab['slug'] }}" class="nsw-tabs__content">
                 {!! $tab['body'] !!}
-            </div>
         </section>
     @endforeach
 </div>

@@ -3,7 +3,7 @@
     <ul>
          {{-- Previous Page Link --}}
         <li>
-            <a class="nsw-button" @if(!$paginator->onFirstPage()) href="{{ $paginator->previousPageUrl() }}" @endif>
+            <a class="nsw-button" @if(!$paginator->onFirstPage()) href="#" wire:click.prevent="previousPage" @endif>
                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
                 <span>Prev</span>
                 <span class="sr-only">Back</span>
@@ -11,12 +11,12 @@
         </li>
 
         <li>
-            <span class="nsw-m-x-md">Page {{ $paginator->currentPage() }}</span>
+            <span class="nsw-m-x-md">Page <span wire:text="{{ $paginator->currentPage() }}"></span></span>
         </li>
 
         {{-- Next Page Link --}}
         <li>
-            <a class="nsw-button"  @if ($paginator->hasMorePages()) href="{{ $paginator->nextPageUrl() }}" @endif>
+            <a class="nsw-button"  @if ($paginator->hasMorePages()) href="#" wire:click.prevent="nextPage" @endif>
                 <span>Next</span>
                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
                 <span class="sr-only">Next</span>

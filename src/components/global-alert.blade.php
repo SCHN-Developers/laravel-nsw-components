@@ -1,17 +1,16 @@
-@props(['title', 'type', 'url' => null])
-
-<div class="nsw-sitewide-message nsw-sitewide-message--{{ $type ?? '' }} js-sitewide-message" role="alert">
-    <div class="nsw-sitewide-message__wrapper">
-        <div class="nsw-sitewide-message__content">
-            <h2 class="nsw-sitewide-message__title">{{ $title }}</h2>
+@props(['type' => null, 'title', 'url' => null, 'buttonText' => null])
+<div class="nsw-global-alert nsw-global-alert--{{ $type}} js-global-alert" role="alert">
+  <div class="nsw-global-alert__wrapper">
+    <div class="nsw-global-alert__content">
+        <div class="nsw-global-alert__title">{{ $title }}</div>
             {{ $slot }}
         </div>
-        @if ($url)
-            <a href="{{ $url }}" class="nsw-button">More information</a>
+        @if($url && $buttonText)
+            <p><a href="{{ $url }}" class="nsw-button nsw-button--white">{{ $buttonText }}</a></p>
         @endif
-        <button type="button" class="nsw-sitewide-message__close">
-            <i class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</i>
-            <span class="sr-only">Close message</span>
+        <button class="nsw-icon-button js-close-alert" type="button" aria-expanded="true">
+        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+        <span class="sr-only">Close message</span>
         </button>
-    </div>
+  </div>
 </div>

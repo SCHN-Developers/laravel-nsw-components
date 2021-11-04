@@ -12,9 +12,12 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/components', 'laravelnswcomponents');
 
         // Layout
+        Blade::component('laravelnswcomponents::layout.masthead', 'nsw-masthead');
         Blade::component('laravelnswcomponents::layout.container', 'nsw-container');
         Blade::component('laravelnswcomponents::layout.grid', 'nsw-grid');
         Blade::component('laravelnswcomponents::layout.col', 'nsw-col');
+        Blade::component('laravelnswcomponents::layout.section', 'nsw-section');
+        Blade::component('laravelnswcomponents::layout.header', 'nsw-header');
 
         // Accordions
         Blade::component('laravelnswcomponents::accordion-container', 'nsw-accordion');
@@ -29,14 +32,14 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelnswcomponents::tab', 'nsw-tab');
         Blade::component('laravelnswcomponents::tabs', 'nsw-tabs');
         Blade::component('laravelnswcomponents::hero-classic', 'nsw-hero-classic');
+        Blade::component('laravelnswcomponents::hero-banner', 'nsw-hero-banner');
 
         // Forms
         Blade::component('laravelnswcomponents::forms.container', 'nsw-form');
         Blade::component('laravelnswcomponents::forms.text-field', 'nsw-input');
-        // Blade::component('laravelnswcomponents::input', 'nsw-input');
-        // Blade::component('laravelnswcomponents::textarea', 'nsw-textarea');
         Blade::component('laravelnswcomponents::forms.select', 'nsw-select');
-        // Blade::component('laravelnswcomponents::radio', 'nsw-radio');
-        // Blade::component('laravelnswcomponents::checkbox', 'nsw-checkbox');
+        Blade::component('laravelnswcomponents::forms.checkbox', 'nsw-checkbox');
+        Blade::component('laravelnswcomponents::forms.checkbox-group', 'nsw-checkbox-group');
+        Blade::component('laravelnswcomponents::forms.radio-group', 'nsw-radio-group');
     }
 }
