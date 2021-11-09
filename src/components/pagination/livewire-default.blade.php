@@ -3,10 +3,10 @@
     <ul>
          {{-- Previous Page Link --}}
         <li>
-            <a class="nsw-icon-button" @if(!$paginator->onFirstPage()) href="#" wire:click.prevent="previousPage" @endif>
+            <button class="nsw-icon-button" @if(!$paginator->onFirstPage()) wire:click="previousPage" @endif>
                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
                 <span class="sr-only">Back</span>
-            </a>
+            </button>
         </li>
 
         {{-- Pagination Elements --}}
@@ -30,10 +30,10 @@
         @endforeach
         {{-- Next Page Link --}}
         <li>
-            <a class="nsw-icon-button"  @if ($paginator->hasMorePages()) href="#" wire:click.prevent="nextPage" @endif>
+            <button class="nsw-icon-button"  @if ($paginator->hasMorePages())  wire:click="nextPage" @endif>
                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
                 <span class="sr-only">Next</span>
-            </a>
+            </button>
         </li>
     </ul>
     </nav>
