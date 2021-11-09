@@ -21,7 +21,7 @@
                 {{-- Array Of Links --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
-                        <a @if($page == $paginator->currentPage()) class="active" wire:key="paginator-page-{{ $page }}" @else wire:click.prevent="gotoPage({{ $page }}" @endif href="{{ $url }}">
+                        <a @if($page == $paginator->currentPage()) class="active" wire:key="paginator-page-{{ $page }}" @else wire:click.prevent="gotoPage({{ $page }})" @endif href="{{ $url }}">
                             <span class="sr-only">Page </span>{{ $page }}
                         </a>
                     @endforeach
