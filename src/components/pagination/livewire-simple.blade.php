@@ -11,7 +11,7 @@
         </li>
 
         <li>
-            <span class="nsw-m-x-md">Page <span wire:text="{{ $paginator->currentPage() }}"></span></span>
+            <span class="nsw-m-x-md">Page {{ $paginator->currentPage() }}</span></span>
         </li>
 
         {{-- Next Page Link --}}
