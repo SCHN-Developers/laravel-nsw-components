@@ -2,12 +2,21 @@
     <nav class="nsw-pagination" aria-label="Pagination">
     <ul>
          {{-- Previous Page Link --}}
-        <li>
-            <button class="nsw-icon-button" @if(!$paginator->onFirstPage()) wire:click="previousPage" @endif>
-                <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
-                <span class="sr-only">Back</span>
-            </button>
-        </li>
+         @if(!$paginator->onFirstPage())
+         <li>
+             <button class="nsw-icon-button" wire:click="previousPage">
+                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                 <span class="sr-only">Back</span>
+             </button>
+         </li>
+         @else
+          <li>
+                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_left</span>
+                 <span class="sr-only">Back</span>
+          </li>
+
+
+         @endif
 
         {{-- Pagination Elements --}}
         @foreach ($elements as $element)
@@ -16,25 +25,33 @@
                 <li>
                     <li class="nsw-pagination__item" aria-disabled="true"><span class="nsw-pagination__text">{{ $element }}</span></li>
                 </li>
-                @endif
+            @endif
 
                 {{-- Array Of Links --}}
                 @if (is_array($element))
                     @foreach ($element as $page => $url)
-                        <a @if($page == $paginator->currentPage()) class="active" wire:key="paginator-page-{{ $page }}" @else wire:click.prevent="gotoPage({{ $page }})" @endif href="{{ $url }}">
+                        @if($page == $paginator->currentPage())
+                          <a class="active" aria-disabled="true">
                             <span class="sr-only">Page </span>{{ $page }}
-                        </a>
+                          </a>
+                        @else
+                          <a wire:key="paginator-page-{{ $page }}" wire:click.prevent="gotoPage({{ $page }})" href="#">
+                              <span class="sr-only">Page </span>{{ $page }}
+                          </a>
+                        @endif
                     @endforeach
                 @endif
 
         @endforeach
         {{-- Next Page Link --}}
+        @if ($paginator->hasMorePages())
         <li>
-            <button class="nsw-icon-button"  @if ($paginator->hasMorePages())  wire:click="nextPage" @endif>
+            <button class="nsw-icon-button" wire:click="nextPage">
                 <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">keyboard_arrow_right</span>
                 <span class="sr-only">Next</span>
             </button>
         </li>
+        @endif
     </ul>
     </nav>
 @endif
