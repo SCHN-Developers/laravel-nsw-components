@@ -41,5 +41,12 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelnswcomponents::forms.checkbox', 'nsw-checkbox');
         Blade::component('laravelnswcomponents::forms.checkbox-group', 'nsw-checkbox-group');
         Blade::component('laravelnswcomponents::forms.radio-group', 'nsw-radio-group');
+
+      // Navigation
+        Blade::component('laravelnswcomponents::navigation.navigation-container', 'nsw-nav-container');
+        Blade::component('laravelnswcomponents::navigation.navigation-item', 'nsw-nav-item');
+        Blade::component('laravelnswcomponents::navigation.navigation-subitem', 'nsw-nav-subitem');
+
+
     }
 }

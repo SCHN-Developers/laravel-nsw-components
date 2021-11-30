@@ -73,6 +73,9 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | [`x-nsw-container`](#x-nsw-container) | [Layout](https://digitalnsw.github.io/nsw-design-system/core/layout/index.html)           |
 | [`x-nsw-grid`](#x-nsw-grid)           | [Grid](https://digitalnsw.github.io/nsw-design-system/core/grid/index.html)               |
 | [`x-nsw-section`](#x-nsw-section)     | [Section](https://digitalnsw.github.io/nsw-design-system/core/section/index.html)         |
+| [`x-nsw-nav-container`](#x-nsw-nav-container)     | [Navigation Container](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)         |
+| [`x-nsw-nav-item`](#x-nsw-nav-item)     | [Navigation Item](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)         |
+| [`x-nsw-nav-subitem`](#x-nsw-nav-subitem)     | [Navigation Sub Item](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)         |
 
 ### Components
 
@@ -186,6 +189,37 @@ https://digitalnsw.github.io/nsw-design-system/core/section/index.html
 <x-nsw-section style="color" color="brand-dark" padding="half">
   <p>section content...</p>
 </x-nsw-section>
+```
+
+---
+
+### `x-nsw-nav-container`
+### `x-nsw-nav-item`
+### `x-nsw-nav-subitem`
+
+Orientates a user and helps them move through the site. (v3.0)
+
+https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html
+
+- **name:** The name of an menu item
+- **url:** The target of the link (optional)
+- **description:** Short text to describe the submenu (optional)
+
+```html
+<x-nsw-nav-container>
+  <x-nsw-nav-item
+    name="Home"
+    url="/home"
+  />
+  <x-nsw-nav-item
+    name="Services"
+    url="/our-services"
+    description="Choose from the services on offer"
+  >
+    <x-nsw-nav-subitem name="Clinical" url="/services/clinical" >
+    <x-nsw-nav-subitem name="Non Clinical" url="/services/non-clinical" >
+  </x-nsw-nav-item>
+</x-nsw-nav-container>
 ```
 
 ---
