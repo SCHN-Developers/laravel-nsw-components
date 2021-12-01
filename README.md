@@ -91,6 +91,7 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | [`x-nsw-notification`](#x-nsw-notification) | [In-page notifications](https://digitalnsw.github.io/nsw-design-system/components/in-page-note/index.html) |
 | [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digitalnsw.github.io/nsw-design-system/components/tabs/index.html)                          |
 | [`pagination`](#pagination)                 | [Pagination](https://digitalnsw.github.io/nsw-design-system/components/pagination/index.html)              |
+| [`x-nsw-link-list`](#pagination)                 | [Link list](https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html)              |
 
 ### Forms
 
@@ -464,6 +465,24 @@ $model->links('laravelnswcomponents::pagination.livewire-default')
 // Livewire - simple
 $model->paginate(10)
 $model->links('laravelnswcomponents::pagination.livewire-simple')
+```
+
+---
+
+### `x-nsw-link-list`
+
+Link lists surface and group related content.
+
+https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html
+
+- **url:** the target url
+- **name:** The label text to display on the row
+
+```html
+<x-nsw-link-list>
+  <x-nsw-list-item url="http://www.google.com" name="Google" />
+  <x-nsw-list-item url="http://www.bing.com" name="Bing" />
+</x-nsw-link-list>
 ```
 
 ---

@@ -33,6 +33,9 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelnswcomponents::tabs', 'nsw-tabs');
         Blade::component('laravelnswcomponents::hero-classic', 'nsw-hero-classic');
         Blade::component('laravelnswcomponents::hero-banner', 'nsw-hero-banner');
+        Blade::component('laravelnswcomponents::link-list', 'nsw-link-list');
+        Blade::component('laravelnswcomponents::link-list-item', 'nsw-list-item');
+
 
         // Forms
         Blade::component('laravelnswcomponents::forms.container', 'nsw-form');
