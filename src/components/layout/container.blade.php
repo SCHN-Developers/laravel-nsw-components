@@ -1,16 +1,16 @@
   @props(['sidebar' => null ])
   <div {{ $attributes->merge(['class' => 'nsw-container']) }}>
-    <div class="nsw-page-layout">
+    <div class="nsw-layout">
         @if($sidebar == 'left')
-            <div class="nsw-page-layout__sidebar nsw-page-layout__sidebar--desktop">
+            <div class="nsw-layout__sidebar nsw-layout__sidebar--deskto">
                 {{ $sidebar_content }}
             </div>
         @endif
-        <main class="nsw-page-layout__main">
+        <main class="nsw-layout__main">
             {{ $slot }}
         </main>
         @if($sidebar == 'right')
-            <div class="nsw-page-layout__sidebar">
+            <div class="nsw-layout__sidebar">
                 {{ $sidebar_content }}
             </div>
         @endif
