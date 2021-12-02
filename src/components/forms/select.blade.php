@@ -13,7 +13,7 @@
 
   @if (isset($helpText))<span id="{{ $id }}--help" class="nsw-form-helper">{{ $helpText }}</span>@endif
 
-  <select class="nsw-form__select" id="form-select-2" aria-describedby="{{ $id }}--help" @error($name) aria-invalid="true" @enderror>
+  <select {{ $attributes }} class="nsw-form__select" id="form-select-2" aria-describedby="{{ $id }}--help" @error($name) aria-invalid="true" @enderror>
      @foreach ($options as $value => $text)
       <option value="{{ $value }}">{{ $text }}</option>
      @endforeach
