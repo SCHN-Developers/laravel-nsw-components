@@ -7,7 +7,7 @@
 <div class="nsw-form__group">
   <fieldset class="nsw-form__fieldset">
         <legend>
-          <span class="nsw-form__legend nsw-form__required">{{ $label }}</span>
+          <span class="nsw-form__legend @if($required) nsw-form__required @endif">{{ $label }}</span>
           @if($helpText)
             <span class="nsw-form__helper">{{ $helpText }}</span>
           @endif
