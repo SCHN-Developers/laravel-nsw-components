@@ -91,7 +91,8 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | [`x-nsw-notification`](#x-nsw-notification) | [In-page notifications](https://digitalnsw.github.io/nsw-design-system/components/in-page-note/index.html) |
 | [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digitalnsw.github.io/nsw-design-system/components/tabs/index.html)                          |
 | [`pagination`](#pagination)                 | [Pagination](https://digitalnsw.github.io/nsw-design-system/components/pagination/index.html)              |
-| [`x-nsw-link-list`](#pagination)                 | [Link list](https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html)              |
+| [`x-nsw-link-list`](#x-nsw-link-list)                 | [Link list](https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html)              |
+| [`x-nsw-filters`](#x-nsw-filters)                 | [Filters](https://digitalnsw.github.io/nsw-design-system/components/filters/index.html)              |
 
 ### Forms
 
@@ -483,6 +484,28 @@ https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html
   <x-nsw-list-item url="http://www.google.com" name="Google" />
   <x-nsw-list-item url="http://www.bing.com" name="Bing" />
 </x-nsw-link-list>
+```
+
+---
+
+### `x-nsw-filters`
+
+Filters allows a user to narrow down results using multiple attributes.
+
+https://digitalnsw.github.io/nsw-design-system/components/filters/index.html
+
+- **onclick:** call to javascript function when clear filters button is pressed (optional)
+- **wire:click:** call to Livewire function when clear filters button is pressed (optional)
+
+```html
+<x-nsw-filters onclick="clearFilters()">
+  // Select or Checkbox groups can be inserted here...
+  <x-nsw-select
+    name="size"
+    label="Size"
+    :options="['S','M','L','XL']"
+  />
+</x-nsw-filters>
 ```
 
 ---
