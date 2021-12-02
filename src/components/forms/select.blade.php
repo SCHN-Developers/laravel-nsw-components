@@ -14,8 +14,8 @@
   @if (isset($helpText))<span id="{{ $id }}--help" class="nsw-form-helper">{{ $helpText }}</span>@endif
 
   <select {{ $attributes }} class="nsw-form__select" id="form-select-2" aria-describedby="{{ $id }}--help" @error($name) aria-invalid="true" @enderror>
-    @if($null_option)
-      <option value="">{{ $null_option }}</option>
+    @if($nullOption)
+      <option value="">{{ $nullOption }}</option>
     @endif
     @foreach ($options as $value => $text)
       <option value="{{ $value }}">{{ $text }}</option>
