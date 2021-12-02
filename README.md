@@ -559,6 +559,7 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 - **options:** key/value pair of select options
 - **label:** Label text
 - **helpText:** Help text for the field (optional)
+- **nullOption:** Allow for a custom null value to appear as a default selection (optional)
 - **required:** Show a red asterisk next the field label to indicate that it's required (optional)
 
 ```html
@@ -566,6 +567,7 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
   name="color"
   label="Color"
   :options="['r'=>'Red', 'b'=>'Blue', 'g'=>'Green']"
+  nullOption="Please select..."
   required
 />
 ```
