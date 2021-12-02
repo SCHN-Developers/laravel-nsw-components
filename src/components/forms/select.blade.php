@@ -5,7 +5,7 @@
     'options',
     'id' => $name . '-' . Str::random(12),
     'required' => false,
-    'nullOption' = >false,
+    'nullOption' => false,
 ])
 
 <div class="nsw-form__group">
