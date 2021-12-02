@@ -385,14 +385,14 @@ The hero banner reflects the goals or purpose of the product or service. (v3.0)
   title="Hero Banner's Title"
   image="https://picsum.photos/id/237/2000/1250"
 >
-  <x-nsw-slot name="text">
+  <x-slot name="text">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse deserunt
     possimus eos quis ab numquam, repellendus officia unde fugit iure sint animi
     aperiam facilis ad non corporis assumenda, aut magni!
-  </x-nsw-slot>
-  <x-nsw-slot name="action">
+  </x-slot>
+  <x-slot name="action">
     <x-nsw-button text="Do Something!" style="dark" />
-  </x-nsw-slot>
+  </x-slot>
 </x-nsw-hero-banner>
 ```
 
