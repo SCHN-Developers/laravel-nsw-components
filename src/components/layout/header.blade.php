@@ -2,7 +2,7 @@
       <div class="nsw-header__container">
         <div class="nsw-header__inner">
           <div class="nsw-header__main">
-            <a class="nsw-header__waratah" href="/">
+            <a class="nsw-header__waratah" href="{{ url('/') }}">
 
 
 
