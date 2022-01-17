@@ -11,7 +11,7 @@
     <span class="nsw-form__helper" id="{{ $id }}-helper-text">{{ $helpText }}</span>
   @endif
 
-  <input {{ $attributes->merge(['class' => 'nsw-form__input' ]) }} type="text" id="{{ $id }}" name="{{ $name }}" @error($name) aria-invalid="true" @enderror />
+  <input {{ $attributes->merge(['class' => 'nsw-form__input' ]) }} type="text" id="{{ $id }}" name="{{ $name }}" value="{{ old($name) }}" @error($name) aria-invalid="true" @enderror />
 
   @error ($name)
       <span class="nsw-form__helper nsw-form__helper--error" id="{{ $id }}--error-text"><i class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">cancel</i>{{ $message }}</span>

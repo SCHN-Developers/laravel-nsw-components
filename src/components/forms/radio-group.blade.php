@@ -15,7 +15,7 @@
         @error($name)<span class="nsw-form__helper nsw-form__helper--error"><i class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">cancel</i>This field is required</span>@enderror
       </legend>
       @foreach($options as $value => $option)
-        <input {{ $attributes }} class="nsw-form__radio-input" value="{{$value}}" type="radio" name="{{$name}}" id="{{$id.'-'.$value}}">
+        <input {{ $attributes }} class="nsw-form__radio-input" value="{{$value}}" type="radio" name="{{$name}}" id="{{$id.'-'.$value}}"{{ (old($name) == $value) ? ' checked' : '' }}>
         <label class="nsw-form__radio-label" for="{{$id.'-'.$value}}">{{ $option }}</label>
       @endforeach
     </fieldset>
