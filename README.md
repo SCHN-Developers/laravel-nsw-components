@@ -61,38 +61,37 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 
 ```
 
-
 ## Available Components
 
 ### Layout
 
-| Component                             | Description                                                                               |
-| ------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [`x-nsw-masthead`](#x-nsw-masthead)   | [Masthead](https://digitalnsw.github.io/nsw-design-system/components/masthead/index.html) |
-| [`x-nsw-header`](#x-nsw-header)       | [Header](https://nswdesignsystem.surge.sh/components/header/index.html)                   |
-| [`x-nsw-container`](#x-nsw-container) | [Layout](https://digitalnsw.github.io/nsw-design-system/core/layout/index.html)           |
-| [`x-nsw-grid`](#x-nsw-grid)           | [Grid](https://digitalnsw.github.io/nsw-design-system/core/grid/index.html)               |
-| [`x-nsw-section`](#x-nsw-section)     | [Section](https://digitalnsw.github.io/nsw-design-system/core/section/index.html)         |
-| [`x-nsw-nav-container`](#x-nsw-nav-container)     | [Navigation Container](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)         |
-| [`x-nsw-nav-item`](#x-nsw-nav-item)     | [Navigation Item](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)         |
-| [`x-nsw-nav-subitem`](#x-nsw-nav-subitem)     | [Navigation Sub Item](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)         |
+| Component                                     | Description                                                                                           |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| [`x-nsw-masthead`](#x-nsw-masthead)           | [Masthead](https://digitalnsw.github.io/nsw-design-system/components/masthead/index.html)             |
+| [`x-nsw-header`](#x-nsw-header)               | [Header](https://nswdesignsystem.surge.sh/components/header/index.html)                               |
+| [`x-nsw-container`](#x-nsw-container)         | [Layout](https://digitalnsw.github.io/nsw-design-system/core/layout/index.html)                       |
+| [`x-nsw-grid`](#x-nsw-grid)                   | [Grid](https://digitalnsw.github.io/nsw-design-system/core/grid/index.html)                           |
+| [`x-nsw-section`](#x-nsw-section)             | [Section](https://digitalnsw.github.io/nsw-design-system/core/section/index.html)                     |
+| [`x-nsw-nav-container`](#x-nsw-nav-container) | [Navigation Container](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html) |
+| [`x-nsw-nav-item`](#x-nsw-nav-item)           | [Navigation Item](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)      |
+| [`x-nsw-nav-subitem`](#x-nsw-nav-subitem)     | [Navigation Sub Item](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html)  |
 
 ### Components
 
-| Component                                   | Description                                                                                                |
-| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [`x-nsw-accordion`](#x-nsw-accordion)       | [Accordion](https://digitalnsw.github.io/nsw-design-system/components/accordion/index.html)                |
-| [`x-nsw-button`](#x-nsw-button)             | [Buttons](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/buttons)  |
-| [`x-nsw-callout`](#x-nsw-callout)           | [Callout](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout)      |
-| [`x-nsw-card`](#x-nsw-card)                 | [Cards](https://digitalnsw.github.io/nsw-design-system/components/card/index.html)                         |
-| [`x-nsw-global-alert`](#x-nsw-global-alert) | [Global alerts](https://digitalnsw.github.io/nsw-design-system/components/global-alert/index.html)         |
-| [`x-nsw-hero-classic`](#x-nsw-hero-classic) | Hero Classic (deprecated)                                                                                  |
-| [`x-nsw-hero-banner`](#x-nsw-hero-banner)   | [Hero Banner](https://digitalnsw.github.io/nsw-design-system/components/hero-banner/index.html)            |
-| [`x-nsw-notification`](#x-nsw-notification) | [In-page notifications](https://digitalnsw.github.io/nsw-design-system/components/in-page-note/index.html) |
-| [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digitalnsw.github.io/nsw-design-system/components/tabs/index.html)                          |
-| [`pagination`](#pagination)                 | [Pagination](https://digitalnsw.github.io/nsw-design-system/components/pagination/index.html)              |
-| [`x-nsw-link-list`](#x-nsw-link-list)                 | [Link list](https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html)              |
-| [`x-nsw-filters`](#x-nsw-filters)                 | [Filters](https://digitalnsw.github.io/nsw-design-system/components/filters/index.html)              |
+| Component                                   | Description                                                                                               |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [`x-nsw-accordion`](#x-nsw-accordion)       | [Accordion](https://digitalnsw.github.io/nsw-design-system/components/accordion/index.html)               |
+| [`x-nsw-button`](#x-nsw-button)             | [Buttons](https://www.digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/buttons) |
+| [`x-nsw-callout`](#x-nsw-callout)           | [Callout](https://digital.nsw.gov.au/digital-service-toolkit/design-system/component-library/callout)     |
+| [`x-nsw-card`](#x-nsw-card)                 | [Cards](https://digitalnsw.github.io/nsw-design-system/components/card/index.html)                        |
+| [`x-nsw-global-alert`](#x-nsw-global-alert) | [Global alerts](https://digitalnsw.github.io/nsw-design-system/components/global-alert/index.html)        |
+| [`x-nsw-hero-classic`](#x-nsw-hero-classic) | Hero Classic (deprecated)                                                                                 |
+| [`x-nsw-hero-banner`](#x-nsw-hero-banner)   | [Hero Banner](https://digitalnsw.github.io/nsw-design-system/components/hero-banner/index.html)           |
+| [`x-nsw-alert`](#x-nsw-alert)               | [In-page alerts](https://digitalnsw.github.io/nsw-design-system/components/in-page-alert/index.html)      |
+| [`x-nsw-tabs`](#x-nsw-tabs)                 | [Tabs](https://digitalnsw.github.io/nsw-design-system/components/tabs/index.html)                         |
+| [`pagination`](#pagination)                 | [Pagination](https://digitalnsw.github.io/nsw-design-system/components/pagination/index.html)             |
+| [`x-nsw-link-list`](#x-nsw-link-list)       | [Link list](https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html)               |
+| [`x-nsw-filters`](#x-nsw-filters)           | [Filters](https://digitalnsw.github.io/nsw-design-system/components/filters/index.html)                   |
 
 ### Forms
 
@@ -100,6 +99,7 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | ----------------------------------------------- | -------------- |
 | [`x-nsw-form`](#x-nsw-form)                     | Form container |
 | [`x-nsw-input`](#x-nsw-input)                   | Text fields    |
+| [`x-nsw-input`](#x-nsw-textarea)                | Textarea       |
 | [`x-nsw-select`](#x-nsw-select)                 | Select         |
 | [`x-nsw-checkbox`](#x-nsw-checkbox)             | Checkbox       |
 | [`x-nsw-checkbox-group`](#x-nsw-checkbox-group) | Checkbox group |
@@ -196,7 +196,9 @@ https://digitalnsw.github.io/nsw-design-system/core/section/index.html
 ---
 
 ### `x-nsw-nav-container`
+
 ### `x-nsw-nav-item`
+
 ### `x-nsw-nav-subitem`
 
 Orientates a user and helps them move through the site. (v3.0)
@@ -399,24 +401,24 @@ The hero banner reflects the goals or purpose of the product or service. (v3.0)
 
 ---
 
-### `x-nsw-notification`
+### `x-nsw-alert`
 
-In-page notifications are used to contextually inform users of important information or status of an interaction. (v3.0)
+In-page alerts are used to contextually inform users of important information or status of an interaction. (v3.0)
 
-https://digitalnsw.github.io/nsw-design-system/components/in-page-note/index.html
+https://digitalnsw.github.io/nsw-design-system/components/in-page-alert/index.html
 
-- **title:** The notification title
+- **title:** The alert title
 - **type:** `(info|success|warning|error)`
 - **icon:** Name of a [Material Icon](https://fonts.google.com/icons)
 
 ```html
-<x-nsw-notification
+<x-nsw-alert
   title="Damn! Something has gone wrong!"
   type="error"
   icon="warning"
 >
   <p>Better go back and fix it up!</p>
-</x-nsw-notification>
+</x-nsw-alert>
 ```
 
 ---
@@ -500,11 +502,7 @@ https://digitalnsw.github.io/nsw-design-system/components/filters/index.html
 ```html
 <x-nsw-filters onclick="clearFilters()">
   // Select or Checkbox groups can be inserted here...
-  <x-nsw-select
-    name="size"
-    label="Size"
-    :options="['S','M','L','XL']"
-  />
+  <x-nsw-select name="size" label="Size" :options="['S','M','L','XL']" />
 </x-nsw-filters>
 ```
 
@@ -542,6 +540,29 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
   name="first_name"
   label="Name"
   helpText="Enter your first name"
+  required
+/>
+```
+
+---
+
+### `x-nsw-textarea`
+
+(v3.0)
+
+https://nswdesignsystem.surge.sh/components/forms/index.html
+
+- **id:** id attribute, will be autogenerated if omitted (optional)
+- **name:** Name of the field
+- **label:** Label text
+- **helpText:** Help text for the field (optional)
+- **required:** Show a red asterisk next the field label to indicate that it's required (optional)
+
+```html
+<x-nsw-texarea
+  name="comments"
+  label="Comments"
+  helpText="Tell us about your experience"
   required
 />
 ```
