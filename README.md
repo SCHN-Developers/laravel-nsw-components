@@ -99,7 +99,7 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | ----------------------------------------------- | -------------- |
 | [`x-nsw-form`](#x-nsw-form)                     | Form container |
 | [`x-nsw-input`](#x-nsw-input)                   | Text fields    |
-| [`x-nsw-input`](#x-nsw-textarea)                | Textarea       |
+| [`x-nsw-texarea`](#x-nsw-textarea)              | Textarea       |
 | [`x-nsw-select`](#x-nsw-select)                 | Select         |
 | [`x-nsw-checkbox`](#x-nsw-checkbox)             | Checkbox       |
 | [`x-nsw-checkbox-group`](#x-nsw-checkbox-group) | Checkbox group |
