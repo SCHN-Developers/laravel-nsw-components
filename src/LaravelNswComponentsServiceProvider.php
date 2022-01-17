@@ -41,6 +41,7 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         // Forms
         Blade::component('laravelnswcomponents::forms.container', 'nsw-form');
         Blade::component('laravelnswcomponents::forms.text-field', 'nsw-input');
+        Blade::component('laravelnswcomponents::forms.textarea', 'nsw-textarea');
         Blade::component('laravelnswcomponents::forms.select', 'nsw-select');
         Blade::component('laravelnswcomponents::forms.checkbox', 'nsw-checkbox');
         Blade::component('laravelnswcomponents::forms.checkbox-group', 'nsw-checkbox-group');
