@@ -28,7 +28,7 @@ class LaravelNswComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelnswcomponents::card', 'nsw-card');
         Blade::component('laravelnswcomponents::callout', 'nsw-callout');
         Blade::component('laravelnswcomponents::global-alert', 'nsw-global-alert');
-        Blade::component('laravelnswcomponents::notification', 'nsw-notification');
+        Blade::component('laravelnswcomponents::alert', 'nsw-alert');
         Blade::component('laravelnswcomponents::tab', 'nsw-tab');
         Blade::component('laravelnswcomponents::tabs', 'nsw-tabs');
         Blade::component('laravelnswcomponents::hero-classic', 'nsw-hero-classic');
