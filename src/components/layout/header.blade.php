@@ -1,3 +1,10 @@
+@props([
+	'title' => null,
+	'description' => null,
+	'search' => true,
+	'menu' => true,
+])
+ 
  <header class="nsw-header">
       <div class="nsw-header__container">
         <div class="nsw-header__inner">
@@ -1008,37 +1015,49 @@
                             </svg>
             <div class="sr-only">Sydney Children&apos;s Hospital Network</div>
             </a>
+          </div>
 
-          </div>
-          <div class="nsw-header__menu">
-            <button type="button" class="js-open-nav" aria-expanded="false" aria-controls="main-nav">
-              <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">menu</span>
-              <span><span class="sr-only">Open</span> Menu</span>
-            </button>
-          </div>
-          <div class="nsw-header__search">
-            <button type="button" class="js-open-search" aria-expanded="false" aria-controls="header-search">
-              <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span>
-              <span><span class="sr-only">Show</span> Search</span>
-            </button>
-          </div>
+					@if($title)
+						<div class="nsw-header__name">
+							<div class="nsw-header__title">{{ $title }}</div>
+							@if($description)<div class="nsw-header__title">{{ $description }}</div>@endif
+						</div>
+					@endif
+
+					@if($menu)
+						<div class="nsw-header__menu">
+							<button type="button" class="js-open-nav" aria-expanded="false" aria-controls="main-nav">
+								<span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">menu</span>
+								<span><span class="sr-only">Open</span> Menu</span>
+							</button>
+						</div>
+					@endif
+
+					@if($search)
+						<div class="nsw-header__search">
+							<button type="button" class="js-open-search" aria-expanded="false" aria-controls="header-search">
+								<span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span>
+								<span><span class="sr-only">Show</span> Search</span>
+							</button>
+						</div>
+					@endif
         </div>
 
-        <div class="nsw-header__search-area js-search-area" id="header-search" hidden>
-          <form role="search">
-            <label for="nsw-header-input" class="sr-only">Search site for:</label>
-            <input class="nsw-header__input js-search-input" type="text" autocomplete="off" id="nsw-header-input" name="input-autocomplete">
-            <button class="nsw-icon-button nsw-icon-button--flex" type="submit">
-              <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span>
-              <span class="sr-only">Search</span>
-            </button>
-          </form>
-          <button class="nsw-icon-button js-close-search" aria-expanded="true" aria-controls="header-search">
-            <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
-            <span class="sr-only">Close search</span>
-          </button>
-        </div>
+				@if($search)
+					<div class="nsw-header__search-area js-search-area" id="header-search" hidden>
+						<form role="search">
+							<label for="nsw-header-input" class="sr-only">Search site for:</label>
+							<input class="nsw-header__input js-search-input" type="text" autocomplete="off" id="nsw-header-input" name="input-autocomplete">
+							<button class="nsw-icon-button nsw-icon-button--flex" type="submit">
+								<span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">search</span>
+								<span class="sr-only">Search</span>
+							</button>
+						</form>
+						<button class="nsw-icon-button js-close-search" aria-expanded="true" aria-controls="header-search">
+							<span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">close</span>
+							<span class="sr-only">Close search</span>
+						</button>
+					</div>
+				@endif
       </div>
     </header>
-
-

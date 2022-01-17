@@ -126,8 +126,13 @@ The NSW Government network header displays across the top of all NSW Government 
 
 https://digitalnsw.github.io/nsw-design-system-docs/components/header/index.html
 
+- **title:** Title text (optional)
+- **description:** Description text (optional)
+- **search:** Include a search bar (boolean, optional)
+- **menu:** Include menu hamburger in mobile view (boolean, optional)
+
 ```html
-<x-nsw-header />
+<x-nsw-header title="AppName" description="Application tag line" />
 ```
 
 ---
