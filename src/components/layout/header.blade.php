@@ -9,7 +9,8 @@
       <div class="nsw-header__container">
         <div class="nsw-header__inner">
           <div class="nsw-header__main">
-            <a class="nsw-header__waratah" href="{{ url('/') }}">
+						<div class="nsw-header__waratah">
+            	<a href="{{ url('/') }}">
 
 
 
@@ -1020,9 +1021,10 @@
 					@if($title)
 						<div class="nsw-header__name">
 							<div class="nsw-header__title">{{ $title }}</div>
-							@if($description)<div class="nsw-header__title">{{ $description }}</div>@endif
+							@if($description)<div class="nsw-header__description">{{ $description }}</div>@endif
 						</div>
 					@endif
+				</div>
 
 					@if($menu)
 						<div class="nsw-header__menu">
