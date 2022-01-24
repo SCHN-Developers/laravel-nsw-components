@@ -3,7 +3,7 @@
   "description": "Laravel blade components based on the NSW Digital Design System",
   "type": "library",
   "require": {
-    "php": "^7.2",
+    "php": "^7.3|^8.0",
     "illuminate/support": "^7.0|^8.0"
   },
   "license": "MIT",
