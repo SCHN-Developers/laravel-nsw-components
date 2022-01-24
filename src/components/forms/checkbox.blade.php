@@ -5,6 +5,6 @@
   'value' => true,
 ])
 <div class="nsw-form__group">
-  <input {{ $attributes }} class="nsw-form__checkbox-input" type="checkbox" value="{{ $value }}" name="{{ $name }}" id="{{ $id }}">
+  <input {{ $attributes }} class="nsw-form__checkbox-input" type="checkbox" value="{{ $value }}" name="{{ $name }}" id="{{ $id }}"{{ (old($name) == $value) ? ' checked' : '' }}>
   <label class="nsw-form__checkbox-label" for="{{ $id }}">{{ $text }}</label>
 </div>
