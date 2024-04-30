@@ -5,22 +5,17 @@ Laravel [Blade components](https://laravel.com/docs/8.x/blade#components) using 
 ## Installation
 
 > Note: at this time, the package is not available on packagist
-
-Add the following to the `repositories` sections of your `composer.json`
+>
+> Add the project repository to your `composer.json`
 
 ```
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/SCHN-Developers/laravel-nsw-components"
-        }
-    ]
+composer config repositories.schn-nsw-components vcs https://github.com/SCHN-Developers/laravel-nsw-components
 ```
 
 Then you can add the package to your composer dependencies
 
 ```shell
-composer require schn/laravel-nsw-components
+composer require schn/laravel-nsw-components:dev-master
 ```
 
 You should also install the [NSW Design System](https://github.com/digitalnsw/nsw-design-system) and inlcude the - necessary CSS and Javascript into your template. **This package does not include any CSS or Javascript.**
