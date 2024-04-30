@@ -5,8 +5,8 @@ Laravel [Blade components](https://laravel.com/docs/8.x/blade#components) using 
 ## Installation
 
 > Note: at this time, the package is not available on packagist
->
-> Add the project repository to your `composer.json`
+
+Add the project repository to your `composer.json`
 
 ```
 composer config repositories.schn-nsw-components vcs https://github.com/SCHN-Developers/laravel-nsw-components
