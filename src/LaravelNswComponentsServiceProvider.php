@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Blade;
 
 class LaravelNswComponentsServiceProvider extends ServiceProvider
 {
+    public function register(){
+      include_once(__DIR__.'/helpers.php'); 
+    }
+
     public function boot()
     {
         $this->loadViewsFrom(__DIR__ . '/components', 'laravelnswcomponents');

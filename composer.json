@@ -10,7 +10,10 @@
   "autoload": {
     "psr-4": {
       "Schn\\LaravelNswComponents\\": "src"
-    }
+    },
+    "files": [
+      "helpers.php"
+    ]
   },
   "extra": {
     "laravel": {
