@@ -94,7 +94,7 @@ You should also install the [NSW Design System](https://github.com/digitalnsw/ns
 | ----------------------------------------------- | -------------- |
 | [`x-nsw-form`](#x-nsw-form)                     | Form container |
 | [`x-nsw-input`](#x-nsw-input)                   | Text fields    |
-| [`x-nsw-texarea`](#x-nsw-textarea)              | Textarea       |
+| [`x-nsw-textarea`](#x-nsw-textarea)              | Textarea       |
 | [`x-nsw-select`](#x-nsw-select)                 | Select         |
 | [`x-nsw-checkbox`](#x-nsw-checkbox)             | Checkbox       |
 | [`x-nsw-checkbox-group`](#x-nsw-checkbox-group) | Checkbox group |
@@ -533,6 +533,8 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 - **label:** Label text
 - **helpText:** Help text for the field (optional)
 - **required:** Show a red asterisk next the field label to indicate that it's required (optional)
+- **model:** nullable|:model - Model to auto fill field name `$model->$name`. 
+- **default:** nullable|default - Value of field. Will override model value.
 
 ```html
 <x-nsw-input
@@ -557,9 +559,11 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 - **label:** Label text
 - **helpText:** Help text for the field (optional)
 - **required:** Show a red asterisk next the field label to indicate that it's required (optional)
+- **model:** nullable|:model - Model to auto fill field name `$model->$name`. 
+- **default:** nullable|default - Value of field. Will override model value.
 
 ```html
-<x-nsw-texarea
+<x-nsw-textarea
   name="comments"
   label="Comments"
   helpText="Tell us about your experience"
@@ -582,6 +586,8 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 - **helpText:** Help text for the field (optional)
 - **nullOption:** Allow for a custom null value to appear as a default selection (optional)
 - **required:** Show a red asterisk next the field label to indicate that it's required (optional)
+- **model:** nullable|:model - Model to auto fill field name `$model->$name`. 
+- **default:** nullable|default - Value of field. Will override model value.
 
 ```html
 <x-nsw-select
@@ -649,6 +655,8 @@ https://nswdesignsystem.surge.sh/components/forms/index.html
 - **helpText:** Help text for the group (optional)
 - **options:** key/value pair of select options
 - **required:** Show a red asterisk next the group label to indicate that it's required (optional)
+- **model:** nullable|:model - Model to auto fill field name `$model->$name`. 
+- **default:** nullable|default - Value of field. Will override model value.
 
 ```html
 <x-nsw-radio-group

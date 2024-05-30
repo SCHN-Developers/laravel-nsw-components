@@ -7,7 +7,9 @@
     'required' => false,
     'nullOption' => false,
     'default' => null,
+    'model' => null,
 ])
+@php($default = $default ?? data_get($model, $name))
 <div class="nsw-form__group">
 
    <label class="nsw-form__label @if($required) nsw-form__required @endif" for="{{ $id }}">{{ $label }}</label>
