@@ -167,10 +167,10 @@ https://digitalnsw.github.io/nsw-design-system/core/grid/index.html
 <x-nsw-grid>
   <x-nsw-col size="md-6">
     <!-- Other content here -->
-  <x-nsw-col>
+  </x-nsw-col>
   <x-nsw-col size="md-6">
     <!-- Other content here -->
-  <x-nsw-col>
+  </x-nsw-col>
 </x-nsw-grid>
 ```
 
