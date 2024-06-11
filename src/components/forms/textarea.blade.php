@@ -5,7 +5,9 @@
     'id' => $name . '-' . Str::random(12),
     'required' => false,
     'default' => null,
+    'model' => null,
 ])
+@php($default = $default ?? data_get($model, $name))
 <div class="nsw-form__group">
   <label for="{{ $id }}" class="nsw-form__label @if($required) nsw-form__required @endif">{{ $label }}</label>
   @if (isset($helpText))
