@@ -208,6 +208,8 @@ https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html
 - **name:** The name of an menu item
 - **url:** The target of the link (optional)
 - **description:** Short text to describe the submenu (optional)
+- **active:** If the link is active (optional) (default: false)
+- **dropdown_name:** If has sub items, the top item name, use name as default
 
 ```html
 <x-nsw-nav-container>
@@ -219,9 +221,11 @@ https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html
     name="Services"
     url="/our-services"
     description="Choose from the services on offer"
+    active=true
+    dropdown_name="All Services"
   >
-    <x-nsw-nav-subitem name="Clinical" url="/services/clinical" >
-    <x-nsw-nav-subitem name="Non Clinical" url="/services/non-clinical" >
+    <x-nsw-nav-subitem name="Clinical" url="/services/clinical" />
+    <x-nsw-nav-subitem name="Non Clinical" url="/services/non-clinical" />
   </x-nsw-nav-item>
 </x-nsw-nav-container>
 ```

@@ -1,6 +1,14 @@
-@props(['name', 'url', 'id' => Str::random(12), 'url' => null, 'description' => null])
+@props([
+    'name',
+    'url',
+    'id' => Str::random(12),
+    'url' => null,
+    'description' => null,
+    'dropdown_name' => null,
+    'active' => false,
+])
 
-<li>
+<li class="{{ $active ? 'active' : ''}}">
   <a href="{{ $url }}">
     <span>{{ $name }}</span>
     @if($slot->isNotEmpty())
@@ -25,7 +33,7 @@
       @if($url)
         <div class="nsw-main-nav__title">
           <a href="{{ $url }}">
-            <span>{{ $name }}</span>
+            <span>{{ $dropdown_name ?? $name }}</span>
             <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">east</span>
           </a>
         </div>
