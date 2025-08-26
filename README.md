@@ -220,8 +220,8 @@ https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html
     url="/our-services"
     description="Choose from the services on offer"
   >
-    <x-nsw-nav-subitem name="Clinical" url="/services/clinical" >
-    <x-nsw-nav-subitem name="Non Clinical" url="/services/non-clinical" >
+    <x-nsw-nav-subitem name="Clinical" url="/services/clinical" />
+    <x-nsw-nav-subitem name="Non Clinical" url="/services/non-clinical" />
   </x-nsw-nav-item>
 </x-nsw-nav-container>
 ```
