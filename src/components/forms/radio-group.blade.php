@@ -12,7 +12,7 @@
 <div class="nsw-form__group">
     <fieldset class="nsw-form__fieldset">
       <legend>
-        <span class="nsw-form__legend nsw-form__required">{{ $label }}@if($required)<span class="sr-only"> (required)</span>@endif</span>
+        <span class="nsw-form__legend @if($required) nsw-form__required @endif">{{ $label }}@if($required)<span class="sr-only"> (required)</span>@endif</span>
         @if($helpText) <span class="nsw-form__helper">{{ $helpText }}</span> @endif
         @error($name)<span class="nsw-form__helper nsw-form__helper--error"><i class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">cancel</i>This field is required</span>@enderror
       </legend>
